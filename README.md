@@ -18,7 +18,7 @@ Each component is in its own template file. To import/include all the components
 Most components allowing adding arbitrary additional attributes after the documented params.  
 E.g. you can use `align="right"` on the Column component, even though it's not an explicit parameter.
 
-- [HTML](#html)  
+- [Html](#html)  
 - [Head](#head)
 - [Button](#button)
 - [Column](#column)
@@ -33,7 +33,7 @@ E.g. you can use `align="right"` on the Column component, even though it's not a
 - [Text](#text)
 
 
-### HTML
+### Html
 An html component to wrap emails.
 ```freemarker
 <@Html lang="en" dir="ltr">
