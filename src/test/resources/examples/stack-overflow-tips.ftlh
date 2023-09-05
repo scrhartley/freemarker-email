@@ -28,21 +28,24 @@
             <@Section style=logo>
               <@Img width=146 src=baseUrl + "images/stack-overflow-logo.png" />
             </@Section>
+
             <@Section style=header>
-                <@Column style=headerContent>
-                    <@Heading style=headerContentTitle>
-                        Find what you want, faster
-                    </@Heading>
-                    <@Text style=headerContentSubtitle>
-                        Tips and tricks for searching on Stack Overflow
-                    </@Text>
-                </@Column>
-                <@Column style=headerImageContainer>
-                    <@Img
-                        width=340
-                        src=baseUrl + "images/stack-overflow-header.png"
-                    />
-                </@Column>
+                <@Row>
+                    <@Column style=headerContent>
+                        <@Heading style=headerContentTitle>
+                            Find what you want, faster
+                        </@Heading>
+                        <@Text style=headerContentSubtitle>
+                            Tips and tricks for searching on Stack Overflow
+                        </@Text>
+                    </@Column>
+                    <@Column style=headerImageContainer>
+                        <@Img
+                            width=340
+                            src=baseUrl + "images/stack-overflow-header.png"
+                        />
+                    </@Column>
+                </@Row>
             </@Section>
 
             <@Section style=content>

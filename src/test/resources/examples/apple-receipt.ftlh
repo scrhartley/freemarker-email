@@ -10,14 +10,16 @@
     <@Body style=main>
       <@Container style=container>
         <@Section>
-          <@Column>
-            <@Img
-              src= baseUrl + "images/apple-logo.png"
-              width="42"
-              height="42"
-              alt="Apple Logo"
-            />
-          </@Column>
+          <@Row>
+            <@Column>
+              <@Img
+                src= baseUrl + "images/apple-logo.png"
+                width="42"
+                height="42"
+                alt="Apple Logo"
+              />
+            </@Column>
+          </@Row>
 
           <@Column align="right" style=tableCell>
             <@Text style=heading>Receipt</@Text>
@@ -37,42 +39,44 @@
           <@Section style=informationTableRow>
             <@Column colSpan="2">
               <@Section>
-                <@Column style=informationTableColumn>
-                  <@Text style=informationTableLabel>APPLE ID</@Text>
-                  <@Link
-                    style=informationTableValue + {
-                      "color": '#15c',
-                      "text-decoration": 'underline'
-                    }
-                  >
-                    zeno.rocha@gmail.com
-                  </@Link>
-                </@Column>
-              </@Section>
+                <@Row>
+                  <@Column style=informationTableColumn>
+                    <@Text style=informationTableLabel>APPLE ID</@Text>
+                    <@Link
+                      style=informationTableValue + {
+                        "color": '#15c',
+                        "text-decoration": 'underline'
+                      }
+                    >
+                      zeno.rocha@gmail.com
+                    </@Link>
+                  </@Column>
+                </@Row>
 
-              <@Section>
-                <@Column style=informationTableColumn>
-                  <@Text style=informationTableLabel>INVOICE DATE</@Text>
-                  <@Text style=informationTableValue>18 Jan 2023</@Text>
-                </@Column>
-              </@Section>
+                <@Row>
+                  <@Column style=informationTableColumn>
+                    <@Text style=informationTableLabel>INVOICE DATE</@Text>
+                    <@Text style=informationTableValue>18 Jan 2023</@Text>
+                  </@Column>
+                </@Row>
 
-              <@Section>
-                <@Column style=informationTableColumn>
-                  <@Text style=informationTableLabel>ORDER ID</@Text>
-                  <@Link
-                    style=informationTableValue + {
-                      "color": '#15c',
-                      "text-decoration": 'underline'
-                    }
-                  >
-                    ML4F5L8522
-                  </@Link>
-                </@Column>
-                <@Column style=informationTableColumn>
-                  <@Text style=informationTableLabel>DOCUMENT NO.</@Text>
-                  <@Text style=informationTableValue>186623754793</@Text>
-                </@Column>
+                <@Row>
+                  <@Column style=informationTableColumn>
+                    <@Text style=informationTableLabel>ORDER ID</@Text>
+                    <@Link
+                      style=informationTableValue + {
+                        "color": '#15c',
+                        "text-decoration": 'underline'
+                      }
+                    >
+                      ML4F5L8522
+                    </@Link>
+                  </@Column>
+                  <@Column style=informationTableColumn>
+                    <@Text style=informationTableLabel>DOCUMENT NO.</@Text>
+                    <@Text style=informationTableValue>186623754793</@Text>
+                  </@Column>
+                </@Row>
               </@Section>
             </@Column>
             <@Column style=informationTableColumn colSpan="2">
@@ -91,82 +95,92 @@
           <@Text style=productsTitle>App Store</@Text>
         </@Section>
         <@Section>
-          <@Column style={ "width": '64px' }>
-            <@Img
-              src= baseUrl + "images/apple-hbo-max-icon.jpeg"
-              width="64"
-              height="64"
-              alt="HBO Max"
-              style=productIcon
-            />
-          </@Column>
-          <@Column style={ "padding-left": '22px' }>
-            <@Text style=productTitle>HBO Max: Stream TV &amp; Movies</@Text>
-            <@Text style=productDescription>HBO Max Ad-Free (Monthly)</@Text>
-            <@Text style=productDescription>Renews Aug 20, 2023</@Text>
-            <@Link
-              href="https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?cc=us&amp;id=1497977514&amp;o=i&amp;type=Subscription%20Renewal"
-              style=productLink
-              data\-saferedirecturl="https://www.google.com/url?q=https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?cc%3Dus%26id%3D1497977514%26o%3Di%26type%3DSubscription%2520Renewal&amp;source=gmail&amp;ust=1673963081204000&amp;usg=AOvVaw2DFCLKMo1snS-Swk5H26Z1"
-            >
-              Write a Review
-            </@Link>
-            <span style=divisor>|</span>
-            <@Link
-              href="https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/reportAProblem?a=1497977514&amp;cc=us&amp;d=683263808&amp;o=i&amp;p=29065684906671&amp;pli=29092219632071&amp;s=1"
-              style=productLink
-              data\-saferedirecturl="https://www.google.com/url?q=https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/reportAProblem?a%3D1497977514%26cc%3Dus%26d%3D683263808%26o%3Di%26p%3D29065684906671%26pli%3D29092219632071%26s%3D1&amp;source=gmail&amp;ust=1673963081204000&amp;usg=AOvVaw3y47L06B2LTrL6qsmaW2Hq"
-            >
-              Report a Problem
-            </@Link>
-          </@Column>
+          <@Row>
+            <@Column style={ "width": '64px' }>
+              <@Img
+                src= baseUrl + "images/apple-hbo-max-icon.jpeg"
+                width="64"
+                height="64"
+                alt="HBO Max"
+                style=productIcon
+              />
+            </@Column>
+            <@Column style={ "padding-left": '22px' }>
+              <@Text style=productTitle>HBO Max: Stream TV &amp; Movies</@Text>
+              <@Text style=productDescription>HBO Max Ad-Free (Monthly)</@Text>
+              <@Text style=productDescription>Renews Aug 20, 2023</@Text>
+              <@Link
+                href="https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?cc=us&amp;id=1497977514&amp;o=i&amp;type=Subscription%20Renewal"
+                style=productLink
+                data\-saferedirecturl="https://www.google.com/url?q=https://userpub.itunes.apple.com/WebObjects/MZUserPublishing.woa/wa/addUserReview?cc%3Dus%26id%3D1497977514%26o%3Di%26type%3DSubscription%2520Renewal&amp;source=gmail&amp;ust=1673963081204000&amp;usg=AOvVaw2DFCLKMo1snS-Swk5H26Z1"
+              >
+                Write a Review
+              </@Link>
+              <span style=divisor>|</span>
+              <@Link
+                href="https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/reportAProblem?a=1497977514&amp;cc=us&amp;d=683263808&amp;o=i&amp;p=29065684906671&amp;pli=29092219632071&amp;s=1"
+                style=productLink
+                data\-saferedirecturl="https://www.google.com/url?q=https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/reportAProblem?a%3D1497977514%26cc%3Dus%26d%3D683263808%26o%3Di%26p%3D29065684906671%26pli%3D29092219632071%26s%3D1&amp;source=gmail&amp;ust=1673963081204000&amp;usg=AOvVaw3y47L06B2LTrL6qsmaW2Hq"
+              >
+                Report a Problem
+              </@Link>
+            </@Column>
 
-          <@Column style=productPriceWrapper align="right">
-            <@Text style=productPrice>$14.99</@Text>
-          </@Column>
+            <@Column style=productPriceWrapper align="right">
+              <@Text style=productPrice>$14.99</@Text>
+            </@Column>
+          </@Row>
         </@Section>
         <@Hr style=productPriceLine />
         <@Section align="right">
-          <@Column style=tableCell align="right">
-            <@Text style=productPriceTotal>TOTAL</@Text>
-          </@Column>
-          <@Column style=productPriceVerticalLine></@Column>
-          <@Column style=productPriceLargeWrapper>
-            <@Text style=productPriceLarge>$14.99</@Text>
-          </@Column>
+          <@Row>
+            <@Column style=tableCell align="right">
+              <@Text style=productPriceTotal>TOTAL</@Text>
+            </@Column>
+            <@Column style=productPriceVerticalLine></@Column>
+            <@Column style=productPriceLargeWrapper>
+              <@Text style=productPriceLarge>$14.99</@Text>
+            </@Column>
+          </@Row>
         </@Section>
         <@Hr style=productPriceLineBottom />
         <@Section>
-          <@Column align="center" style=block>
-            <@Img
-              src= baseUrl + "images/apple-card-icon.png"
-              width="60"
-              height="17"
-              alt="Apple Card"
-            />
-          </@Column>
-        </@Section>
-        <@Section>
-          <@Column align="center" style=ctaTitle>
-            <@Text style=ctaText>Save 3% on all your Apple purchases.</@Text>
-          </@Column>
-        </@Section>
-        <@Section>
-          <@Column align="center" style=walletWrapper>
-            <@Link
-              href="https://wallet.apple.com/apple-card/setup/feature/ccs?referrer=cid%3Dapy-120-100003"
-              style=walletLink
-            >
+          <@Row>
+            <@Column align="center" style=block>
               <@Img
-                src= baseUrl + "images/apple-wallet.png"
-                width="28"
-                height="28"
-                alt="Apple Wallet"
-                style=walletImage
+                src= baseUrl + "images/apple-card-icon.png"
+                width="60"
+                height="17"
+                alt="Apple Card"
               />
-              <span style=walletLinkText>Apply and use in minutes</span>
-            </@Link>
-          </@Column>
+            </@Column>
+          </@Row>
+        </@Section>
+        <@Section>
+          <@Row>
+            <@Column align="center" style=ctaTitle>
+              <@Text style=ctaText>Save 3% on all your Apple purchases.</@Text>
+            </@Column>
+          </@Row>
+        </@Section>
+        <@Section>
+          <@Row>
+            <@Column align="center" style=walletWrapper>
+              <@Link
+                href="https://wallet.apple.com/apple-card/setup/feature/ccs?referrer=cid%3Dapy-120-100003"
+                style=walletLink
+              >
+                <@Img
+                  src= baseUrl + "images/apple-wallet.png"
+                  width="28"
+                  height="28"
+                  alt="Apple Wallet"
+                  style=walletImage
+                />
+                <span style=walletLinkText>Apply and use in minutes</span>
+              </@Link>
+            </@Column>
+          </@Row>
         </@Section>
         <@Hr style=walletBottomLine />
         <@Text style=footerText>
@@ -230,14 +244,16 @@
           </@Link>
         </@Text>
         <@Section>
-          <@Column align="center" style=footerIcon>
-            <@Img
-              src= baseUrl + "images/apple-logo.png"
-              width="26"
-              height="26"
-              alt="Apple Card"
-            />
-          </@Column>
+          <@Row>
+            <@Column align="center" style=footerIcon>
+              <@Img
+                src= baseUrl + "images/apple-logo.png"
+                width="26"
+                height="26"
+                alt="Apple Card"
+              />
+            </@Column>
+          </@Row>
         </@Section>
         <@Text style=footerLinksWrapper>
           <@Link href="https://buy.itunes.apple.com/WebObjects/MZFinance.woa/wa/accountSummary?mt=8">

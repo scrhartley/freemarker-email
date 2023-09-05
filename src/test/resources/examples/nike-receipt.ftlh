@@ -9,7 +9,7 @@
     <@Body style=main>
       <@Container style=container>
         <@Section style=track.container>
-          <@Section>
+          <@Row>
             <@Column>
               <@Text style=global.paragraphWithBold>Tracking Number</@Text>
               <@Text style=track.number>1ZV218970300071628</@Text>
@@ -17,7 +17,7 @@
             <@Column align="right">
               <@Link style=global.button>Track Package</@Link>
             </@Column>
-          </@Section>
+          </@Row>
         </@Section>
         <@Hr style=global.hr />
         <@Section style=message>
@@ -49,7 +49,7 @@
         <@Section
           style= paddingX + { "padding-top": '40px', "padding-bottom": '40px' }
         >
-          <@Section>
+          <@Row>
             <@Column>
               <@Img
                 src= baseUrl + "images/nike-product.png"
@@ -64,11 +64,11 @@
               </@Text>
               <@Text style=global.text>Size L (12–14)</@Text>
             </@Column>
-          </@Section>
+          </@Row>
         </@Section>
         <@Hr style=global.hr />
         <@Section style=global.defaultPadding>
-          <@Section style={ "display": 'inline-flex', "margin-bottom": '40px' }>
+          <@Row style={ "display": 'inline-flex', "margin-bottom": '40px' }>
             <@Column style={ "width": '170px' }>
               <@Text style=global.paragraphWithBold>Order Number</@Text>
               <@Text style=track.number>C0106373851</@Text>
@@ -77,18 +77,19 @@
               <@Text style=global.paragraphWithBold>Order Date</@Text>
               <@Text style=track.number>Sep 22, 2022</@Text>
             </@Column>
-          </@Section>
-          <@Section>
+          </@Row>
+          <@Row>
             <@Column align="center">
               <@Link style=global.button>Order Status</@Link>
             </@Column>
-          </@Section>
+          </@Row>
         </@Section>
         <@Hr style=global.hr />
         <@Section style=paddingY>
-          <@Text style=global.heading>Top Picks For You</@Text>
-
-          <@Section style=recommendations.container>
+          <@Row>
+            <@Text style=global.heading>Top Picks For You</@Text>
+          </@Row>
+          <@Row style=recommendations.container>
             <@Column
               style= recommendations.product + { "padding-left": '4px' }
               align="center"
@@ -141,12 +142,14 @@
                 Women's Nike Pre-Match Football Top
               </@Text>
             </@Column>
-          </@Section>
+          </@Row>
         </@Section>
         <@Hr style=global.hr />
         <@Section style=menu.container>
-          <@Text style=menu.title>Get Help</@Text>
-          <@Section style=menu.content>
+          <@Row>
+            <@Text style=menu.title>Get Help</@Text>
+          </@Row>
+          <@Row style=menu.content>
             <@Column style={ "width": '33%' } colSpan=1>
               <@Link href="/" style=menu.text>
                 Shipping Status
@@ -162,8 +165,8 @@
                 Returns & Exchanges
               </@Link>
             </@Column>
-          </@Section>
-          <@Section style= menu.content + { "padding-top": '0' }>
+          </@Row>
+          <@Row style= menu.content + { "padding-top": '0' }>
             <@Column style={ "width": '33%' } colSpan=1>
               <@Link href="/" style=menu.text>
                 How to Return
@@ -174,9 +177,9 @@
                 Contact Options
               </@Link>
             </@Column>
-          </@Section>
+          </@Row>
           <@Hr style=global.hr />
-          <@Section style=menu.tel>
+          <@Row style=menu.tel>
             <@Column>
               <@Section>
                 <@Column style={ "width": '16px' }>
@@ -203,12 +206,14 @@
                 4 am - 11 pm PT
               </@Text>
             </@Column>
-          </@Section>
+          </@Row>
         </@Section>
         <@Hr style=global.hr />
         <@Section style=paddingY>
-          <@Text style=global.heading>Nike.com</@Text>
-          <@Section style=categories.container>
+          <@Row>
+            <@Text style=global.heading>Nike.com</@Text>
+          </@Row>
+          <@Row style=categories.container>
             <@Column align="center">
               <@Link href="/" style=categories.text>
                 Men
@@ -229,28 +234,34 @@
                 Customize
               </@Link>
             </@Column>
-          </@Section>
+          </@Row>
         </@Section>
         <@Hr style= global.hr + { "margin-top": '12px' } />
         <@Section style=paddingY>
-          <@Section style=footer.policy>
+          <@Row style=footer.policy>
             <@Column>
               <@Text style=footer.text>Web Version</@Text>
             </@Column>
             <@Column>
               <@Text style=footer.text>Privacy Policy</@Text>
             </@Column>
-          </@Section>
-          <@Text style= footer.text + { "padding-top": '30px', "padding-bottom": '30px' }>
-            Please contact us if you have any questions. (If you reply to this
-            email, we won't be able to see it.)
-          </@Text>
-          <@Text style=footer.text>
-            © 2022 Nike, Inc. All Rights Reserved.
-          </@Text>
-          <@Text style=footer.text>
-            NIKE, INC. One Bowerman Drive, Beaverton, Oregon 97005, USA.
-          </@Text>
+          </@Row>
+          <@Row>
+            <@Text style= footer.text + { "padding-top": '30px', "padding-bottom": '30px' }>
+              Please contact us if you have any questions. (If you reply to this
+              email, we won't be able to see it.)
+            </@Text>
+          </@Row>
+          <@Row>
+            <@Text style=footer.text>
+              © 2022 Nike, Inc. All Rights Reserved.
+            </@Text>
+          </@Row>
+          <@Row>
+            <@Text style=footer.text>
+              NIKE, INC. One Bowerman Drive, Beaverton, Oregon 97005, USA.
+            </@Text>
+          </@Row>
         </@Section>
       </@Container>
     </@Body>

@@ -10,5 +10,6 @@
 <#include "img.ftlh">
 <#include "link.ftlh">
 <#include "preview.ftlh">
+<#include "row.ftlh">
 <#include "section.ftlh">
 <#include "text.ftlh">

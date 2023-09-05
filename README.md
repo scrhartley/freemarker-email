@@ -22,6 +22,7 @@ E.g. you can use `align="right"` on the Column component, even though it's not a
 - [Head](#head)
 - [Button](#button)
 - [Column](#column)
+- [Row](#row)
 - [Container](#container)
 - [Font](#font)
 - [Heading](#heading)
@@ -80,17 +81,38 @@ Behind the scenes this is a &lt;a&gt; tag, that is styled like a &lt;button&gt; 
 
 ### Column
 Display a column/cell that separates content areas vertically in your email.
+A column needs to be used in combination with a Row component.
 ```freemarker
-<@Section>
+<@Row>
     <@Column>A</@Column>
     <@Column>B</@Column>
     <@Column>C</@Column>
-</@Section>
+</@Row>
 ```
 #### Params
 | Name  | Type              | Default | Description                         |
 |-------|-------------------|---------|-------------------------------------|
 | style | map &#124; string |         | Additional CSS styling for the cell |
+
+
+### Row
+Display a row that separates content areas horizontally in your email.
+```freemarker
+<@Section>
+    <@Row>
+        <@Column>Row 1, Column 1</@Column>
+        <@Column>Row 1, Column 2</@Column>
+    </@Row>
+    <@Row>
+        <@Column>Row 2, Column 1</@Column>
+        <@Column>Row 2, Column 2</@Column>
+    </@Row>
+</@Section>
+```
+#### Params
+| Name  | Type              | Default | Description            |
+|-------|-------------------|---------|------------------------|
+| style | map &#124; string |         | Additional CSS styling |
 
 
 ### Container
@@ -211,11 +233,23 @@ A good practice is to keep that text under 90 characters.
 ```
 
 
-Display a section that can be formatted using columns.
 ### Section
+Display a section that can also be formatted using rows and columns.
 ```freemarker
 <@Section>
     <@Text>Hello World</@Text>
+</@Section>
+```
+```freemarker
+<@Section>
+    <@Row>
+        <@Column>Column 1, Row 1</@Column>
+        <@Column>Column 2, Row 1</@Column>
+    </@Row>
+    <@Row>
+        <@Column>Column 1, Row 2</@Column>
+        <@Column>Column 2, Row 2</@Column>
+    </@Row>
 </@Section>
 ```
 #### Params
