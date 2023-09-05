@@ -138,7 +138,7 @@ To view all email clients that support web fonts [see here](https://www.caniemai
 |     fontStyle      |              string               | `normal` | The font-style of the font                                                                                                       |
 
 
-## Heading
+### Heading
 A block of heading text.
 ```freemarker
 <@Heading tag="h2">Lorem ipsum</@Heading>
@@ -157,7 +157,7 @@ A block of heading text.
 | style |  map &#124; string   |         | Additional CSS styling                                      |
 
 
-## Hr
+### Hr
 Display a divider that separates content areas in your email.
 ```freemarker
 <@Hr />
@@ -168,7 +168,7 @@ Display a divider that separates content areas in your email.
 | style | map &#124; string |         | Additional CSS styling |
 
 
-## Image
+### Image
 Display an image in your email.
 
 💡 All email clients can display .png, .gif, and .jpg images. Unfortunately, .svg images are not well-supported, 
@@ -187,7 +187,7 @@ regardless of how they’re referenced, so avoid using these
 | style  | map &#124; string |         | Additional CSS styling for the image |
 
 
-## Link
+### Link
 A hyperlink to web pages, email addresses, or anything else a URL can address.
 ```freemarker
 <@Link href="https://example.com">Example</@Link>
@@ -200,7 +200,7 @@ A hyperlink to web pages, email addresses, or anything else a URL can address.
 | style  |  map &#124; string  |          | Additional CSS styling                           |
 
 
-## Preview
+### Preview
 A preview text that will be displayed in the inbox of the recipient.
 
 ℹ Email clients have the concept of “preview text” which gives insight into what’s inside the 
@@ -211,8 +211,8 @@ A good practice is to keep that text under 90 characters.
 ```
 
 
-## Section
 Display a section that can be formatted using columns.
+### Section
 ```freemarker
 <@Section>
     <@Text>Hello World</@Text>
@@ -224,7 +224,7 @@ Display a section that can be formatted using columns.
 | style | map &#124; string |         | Additional CSS styling |
 
 
-## Text
+### Text
 A block of text separated by blank spaces (a paragraph).
 ```freemarker
 <@Text>Lorem ipsum</@Text>
