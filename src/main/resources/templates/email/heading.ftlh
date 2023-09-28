@@ -23,7 +23,6 @@
         <#if attrs?is_hash>
             <#list attrs as name, value>${name}="${value}"</#list>
         </#if>
-        data-id="freemarker-email-heading"
         <#if style?is_hash>
             <#local style=marginStyle + style>
             style="${style?keys?map(name -> name + ':' + style[name])?join(';')}"

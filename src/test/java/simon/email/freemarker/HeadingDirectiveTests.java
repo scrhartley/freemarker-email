@@ -15,7 +15,7 @@ public class HeadingDirectiveTests {
                     Lorem ipsum
                 </@Heading>""");
         assertEqualsIgnoringWhitespace("""
-                <h2 data-id="freemarker-email-heading" style="margin-left:4px;margin-right:4px">Lorem ipsum</h2>""",
+                <h2 style="margin-left:4px;margin-right:4px">Lorem ipsum</h2>""",
                 actualOutput);
 
         // Pass string with pixels for margin
@@ -24,7 +24,7 @@ public class HeadingDirectiveTests {
                     Lorem ipsum
                 </@Heading>""");
         assertEqualsIgnoringWhitespace("""
-                <h2 data-id="freemarker-email-heading" style="margin-top:4px;margin-bottom:4px">Lorem ipsum</h2>""",
+                <h2 style="margin-top:4px;margin-bottom:4px">Lorem ipsum</h2>""",
                 actualOutput);
 
         // Pass number for margin
@@ -33,7 +33,7 @@ public class HeadingDirectiveTests {
                     Lorem ipsum
                 </@Heading>""");
         assertEqualsIgnoringWhitespace("""
-                <h2 data-id="freemarker-email-heading" style="margin-left:4px;margin-right:4px">Lorem ipsum</h2>""",
+                <h2 style="margin-left:4px;margin-right:4px">Lorem ipsum</h2>""",
                 actualOutput);
 
         // Pass large number for margin (make sure we don't get unintended localization)
@@ -42,7 +42,7 @@ public class HeadingDirectiveTests {
                     Lorem ipsum
                 </@Heading>""");
         assertEqualsIgnoringWhitespace("""
-                <h2 data-id="freemarker-email-heading" style="margin-left:4000px;margin-right:4000px">Lorem ipsum</h2>""",
+                <h2 style="margin-left:4000px;margin-right:4000px">Lorem ipsum</h2>""",
                 actualOutput);
     }
 
