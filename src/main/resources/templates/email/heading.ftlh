@@ -21,7 +21,7 @@
     <#if ml?has_content><#local marginStyle += { "margin-left":   ml?ensure_ends_with("px") }></#if>
     <${tag}
         <#if attrs?is_hash>
-            <#list attrs as name, value>${name}="${value}"</#list>
+            <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
         <#if style?is_hash>
             <#local style=marginStyle + style>

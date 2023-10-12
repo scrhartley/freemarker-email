@@ -4,7 +4,7 @@
         align="center"
         width="100%"
         <#if attrs?is_hash>
-            <#list attrs as name, value>${name}="${value}"</#list>
+            <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
         data-id="__freemarker-email-container"
         role="presentation"

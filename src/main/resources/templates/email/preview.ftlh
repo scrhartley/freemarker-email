@@ -12,7 +12,7 @@
     <#local text = textMarkup?markup_string?truncate_c(PREVIEW_MAX_LENGTH, "")>
     <div
         <#if attrs?is_hash>
-            <#list attrs as name, value>${name}="${value}"</#list>
+            <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
         id="__freemarker-email-preview"
         style="${style?keys?map(name -> name + ':' + style[name])?join(';')}"

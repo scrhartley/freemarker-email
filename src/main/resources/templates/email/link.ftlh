@@ -5,7 +5,7 @@
     }>
     <a
         <#if attrs?is_hash>
-            <#list attrs as name, value>${name}="${value}"</#list>
+            <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
         data-id="freemarker-email-link"
         target="${target}"

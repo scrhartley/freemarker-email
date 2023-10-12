@@ -7,7 +7,7 @@
     }>
     <img
         <#if attrs?is_hash>
-            <#list attrs as name, value>${name}="${value}"</#list>
+            <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
         data-id="freemarker-email-img"
         <#if alt?has_content>alt="${alt}"</#if>
