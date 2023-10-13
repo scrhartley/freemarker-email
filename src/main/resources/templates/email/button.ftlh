@@ -1,13 +1,13 @@
 <#macro Button style={} target="_blank" attrs...>
     <#local pt=0 pr=0 pb=0 pl=0>
-    <#local convertToPx = r'
-        (val?matches(r"^([\d.]+)(.*)$")
+    <#local convertToPx = r' val
+            ?matches(r"^([\d.]+)(.*)$")
             ?map(res -> res?groups[2]?c_lower_case?switch(
                 "", val?number, "px", res?groups[1]?number, "%", res?groups[1]?number / 100 * 600,
                 "em", res?groups[1]?number * 16, "rem", res?groups[1]?number * 16,
                 0 <#-- Unsupported units -->
-            )) + [0] <#-- Invalid format -->
-        )[0]'>
+            ))
+            ?first!0 '> <#-- Invalid format -->
 
     <#if style.padding!?is_number>
         <#local pt=style.padding pr=style.padding pb=style.padding pl=style.padding>
