@@ -65,18 +65,19 @@ A link that is styled to look like a button.
 ℹ **Semantics**: Quite often in the email world we talk about buttons, when actually we mean links.  
 Behind the scenes this is a &lt;a&gt; tag, that is styled like a &lt;button&gt; tag.
 ```freemarker
-<@Button href="https://example.com" style={ 'color': '#61dafb' }>
+<@Button
+    href="https://example.com"
+    style={ 'color': '#61dafb', 'padding': '10px 20px' }
+>
     Click me
 </@Button>
 ```
 #### Params
-|  Name  |         Type         | Default  | Description                                      |
-|:------:|:--------------------:|:--------:|--------------------------------------------------|
-|  href  | string _(required)_  |          | Link to be triggered when the button is clicked  |
-| target |        string        | `_blank` | Specify the target attribute for the button link |
-|   pX   | number &#124; string |   `0`    | Horizontal padding in px, affecting button width |
-|   pY   | number &#124; string |   `0`    | Vertical padding in px, affecting button height  |
-| style  |  map &#124; string   |          | Additional CSS styling for the link              |
+|  Name  |        Type         | Default  | Description                                      |
+|:------:|:-------------------:|:--------:|--------------------------------------------------|
+|  href  | string _(required)_ |          | Link to be triggered when the button is clicked  |
+| target |       string        | `_blank` | Specify the target attribute for the button link |
+| style  |         map         |          | Additional CSS styling for the link              |
 
 
 ### Column

@@ -81,7 +81,7 @@
               front-end designer or developer at any experience level.
             </@Text>
 
-            <@Button style=button pX=12 pY=12>
+            <@Button style=button>
               <strong>Learn More</strong>
             </@Button>
           </@Section>
@@ -191,7 +191,7 @@
         </@Section>
 
         <@Section style=goToChallenge>
-          <@Button style=footerButton pY=15 pX=30>
+          <@Button style=footerButton>
             Go to Challenge Page
           </@Button>
         </@Section>
@@ -313,7 +313,8 @@
       "font-size": '15px',
       "line-height": '18px',
       "cursor": 'pointer',
-      "border-radius": '4px'
+      "border-radius": '4px',
+      "padding": '12px'
     }>
 
     <#assign resourcesTitle = {
@@ -373,7 +374,8 @@
       "background": '#222',
       "border-radius": '4px',
       "font-weight": 'bold',
-      "cursor": 'pointer'
+      "cursor": 'pointer',
+      "padding": '15px 30px'
     }>
 
     <#assign footer = {
