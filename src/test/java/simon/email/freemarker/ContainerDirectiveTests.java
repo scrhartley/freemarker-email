@@ -14,7 +14,7 @@ public class ContainerDirectiveTests {
                     <button>Hi</button>
                 </@Container>""");
         assertEqualsIgnoringWhitespace("""
-                <table align="center" width="100%" data-id="__freemarker-email-container" role="presentation" cellSpacing="0" cellPadding="0" border="0" style="max-width:300px"><tbody><tr style="width:100%"><td><button>Hi</button></td></tr></tbody></table>""",
+                <table align="center" width="100%" border="0" cellPadding="0" cellSpacing="0" data-id="__freemarker-email-container" role="presentation" style="max-width:300px"><tbody><tr style="width:100%"><td><button>Hi</button></td></tr></tbody></table>""",
                 actualOutput);
     }
 
