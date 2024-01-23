@@ -63,6 +63,7 @@
           </@Text>
 
           <@Img
+            style=imgCube
             src= baseUrl + "images/codepen-cube.png"
             width=600
             alt="codepen"
@@ -218,7 +219,12 @@
     }>
 
     <#assign imgHeader = {
-      "margin": 'auto'
+      "margin": 'auto',
+      "max-width": '100%'
+    }>
+
+    <#assign imgCube = {
+      "max-width": '100%'
     }>
 
     <#assign header = {
@@ -230,22 +236,20 @@
     }>
 
     <#assign container = {
-      "padding-left": '12px',
-      "padding-right": '12px',
       "margin": '0 auto',
       "width": '648px',
-      "max-width": '648px',
+      "max-width": '100%',
       "position": 'relative'
     }>
 
     <#assign challengeLink = {
       "background-color": '#505050',
       "text-align": 'center',
-      "padding": '10px 0 25px 0',
+      "padding": '10px 0',
       "font-size": '13px',
       "position": 'absolute',
-      "width": '100%',
-      "max-width": '648px',
+      "width": '648px',
+      "max-width": '100%',
       "top": '-28px',
       "margin": '0 0 16px 0'
     }>

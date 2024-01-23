@@ -40,7 +40,7 @@
         </@Section>
         <@Hr style=global.hr />
         <@Section style=global.defaultPadding>
-          <@Text style=adressTitle>Shipping to: Zeno Rocha</@Text>
+          <@Text style=adressTitle>Shipping to: Alan Turing</@Text>
           <@Text style= global.text + { "font-size": 14 }>
             2125 Chestnut St, San Francisco, CA 94123
           </@Text>
@@ -326,6 +326,7 @@
     <#assign container = {
       "margin": '10px auto',
       "width": '600px',
+      "max-width": '100%',
       "border": '1px solid #E5E5E5'
     }>
 

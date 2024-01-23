@@ -41,6 +41,7 @@
                     </@Column>
                     <@Column style=headerImageContainer>
                         <@Img
+                            style=headerImage
                             width=340
                             src=baseUrl + "images/stack-overflow-header.png"
                         />
@@ -149,6 +150,10 @@
       "padding": '30px 10px'
     }>
 
+    <#assign headerImage = {
+      "max-width": '100%'
+    }>
+
     <#assign title = {
       "margin": '0 0 15px',
       "font-weight": 'bold',
@@ -168,14 +173,15 @@
     }>
 
     <#assign container = {
-      "max-width": '680px',
-      "width": '100%',
+      "width": '680px',
+      "max-width": '100%',
       "margin": '0 auto',
       "background-color": '#ffffff'
     }>
 
     <#assign footer = {
       "width": '680px',
+      "max-width": '100%',
       "margin": '32px auto 0 auto',
       "padding": '0 30px'
     }>

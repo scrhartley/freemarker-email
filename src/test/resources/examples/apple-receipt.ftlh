@@ -48,7 +48,7 @@
                         "text-decoration": 'underline'
                       }
                     >
-                      zeno.rocha@gmail.com
+                      alan.turing@gmail.com
                     </@Link>
                   </@Column>
                 </@Row>
@@ -84,7 +84,7 @@
               <@Text style=informationTableValue>
                 Visa .... 7461 (Apple Pay)
               </@Text>
-              <@Text style=informationTableValue>Zeno Rocha</@Text>
+              <@Text style=informationTableValue>Alan Turing</@Text>
               <@Text style=informationTableValue>2125 Chestnut St</@Text>
               <@Text style=informationTableValue>San Francisco, CA 94123</@Text>
               <@Text style=informationTableValue>USA</@Text>
@@ -292,7 +292,8 @@
     <#assign container = {
       "margin": '0 auto',
       "padding": '20px 0 48px',
-      "width": '660px'
+      "width": '660px',
+      "max-width": '100%'
     }>
 
     <#assign tableCell = { "display": 'table-cell' }>
