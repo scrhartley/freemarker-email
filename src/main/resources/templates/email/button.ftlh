@@ -34,11 +34,12 @@
     <#local y = pt + pb>
     <#local textRaise = y * 3 / 4> <#-- px to pt -->
 
-    <#local buttonStyle = style + {
+    <#local buttonStyle = {
         "line-height": "100%",
         "text-decoration": "none",
         "display": "inline-block",
-        "max-width": "100%",
+        "max-width": "100%"
+    } + style + {
         "padding": "${pt?c}px ${pr?c}px ${pb?c}px ${pl?c}px"
     }>
     <#local buttonTextStyle = {
