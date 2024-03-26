@@ -26,10 +26,10 @@
         [ style["padding-top"]!, style["padding-right"]!, style["padding-bottom"]!, style["padding-left"]! ]
             ?map(val -> val?is_string?then(val?trim, val))
             ?map(val -> (!val?has_content || val?is_number)?then(val, convertToPx?eval) )>
-    <#if padValues[0]?has_content><#local pt = padValues[0]?number></#if>
-    <#if padValues[1]?has_content><#local pr = padValues[1]?number></#if>
-    <#if padValues[2]?has_content><#local pb = padValues[2]?number></#if>
-    <#if padValues[3]?has_content><#local pl = padValues[3]?number></#if>
+    <#if padValues[0]?has_content><#local pt = padValues[0]></#if>
+    <#if padValues[1]?has_content><#local pr = padValues[1]></#if>
+    <#if padValues[2]?has_content><#local pb = padValues[2]></#if>
+    <#if padValues[3]?has_content><#local pl = padValues[3]></#if>
 
     <#local y = pt + pb>
     <#local textRaise = y * 3 / 4> <#-- px to pt -->
