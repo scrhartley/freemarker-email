@@ -17,9 +17,10 @@ public class TextDirectiveTests {
 
     @Test
     void renderHrComponentWithStyleMap() {
-        String actualOutput = render("<@Text style={ 'font-size': '16px' }>Lorem ipsum</@Text>");
+        String actualOutput = render(
+                "<@Text style={ 'font-size': '16px', 'opacity': 0.7654 }>Lorem ipsum</@Text>");
         assertEqualsIgnoringWhitespace("""
-                <p data-id="freemarker-email-text" style="font-size:16px;line-height:24px;margin:16px 0">Lorem ipsum</p>""",
+                <p data-id="freemarker-email-text" style="font-size:16px;line-height:24px;margin:16px 0;opacity:0.7654">Lorem ipsum</p>""",
                 actualOutput);
     }
 

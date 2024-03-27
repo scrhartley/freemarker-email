@@ -17,9 +17,9 @@ public class HrDirectiveTests {
 
     @Test
     void renderHrComponentWithStyleMap() {
-        String actualOutput = render("<@Hr style={ 'width': '99%' } />");
+        String actualOutput = render("<@Hr style={ 'width': '99%', 'opacity': 0.7654 } />");
         assertEqualsIgnoringWhitespace("""
-                <hr data-id="freemarker-email-hr" style="width:99%;border:none;border-top:1px solid #eaeaea">""",
+                <hr data-id="freemarker-email-hr" style="width:99%;border:none;border-top:1px solid #eaeaea;opacity:0.7654">""",
                 actualOutput);
     }
 

@@ -17,9 +17,9 @@ public class BodyDirectiveTests {
 
     @Test
     void renderBodyWithStyleMapAndAttr() {
-        String actualOutput = render("<@Body style={'color':'red'} class='myClass'>Lorem ipsum</@Body>");
+        String actualOutput = render("<@Body style={'color':'red', 'opacity': 0.7654 } class='myClass'>Lorem ipsum</@Body>");
         assertEqualsIgnoringWhitespace("""
-                <body class="myClass" data-id="__freemarker-email-body" style="color:red">Lorem ipsum</body>""",
+                <body class="myClass" data-id="__freemarker-email-body" style="color:red;opacity:0.7654">Lorem ipsum</body>""",
                 actualOutput);
     }
 

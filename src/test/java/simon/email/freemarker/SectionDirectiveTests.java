@@ -21,6 +21,14 @@ public class SectionDirectiveTests {
     }
 
     @Test
+    void renderSectionComponentWithStyle() {
+        String actualOutput = render("<@Section style={ 'opacity': 0.7654 }>Lorem ipsum</@Section>");
+        assertEqualsIgnoringWhitespace("""
+                <table align="center" width="100%" data-id="freemarker-email-section" style="opacity:0.7654" border="0" cellPadding="0" cellSpacing="0" role="presentation"><tbody><tr><td>Lorem ipsum</td></tr></tbody></table>""",
+                actualOutput);
+    }
+
+    @Test
     void renderSectionComponentWithTdWrapperWhenNoColumn() {
         String actualOutput = render("""
                 <@Section>

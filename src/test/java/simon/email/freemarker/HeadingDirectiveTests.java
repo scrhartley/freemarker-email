@@ -44,6 +44,15 @@ public class HeadingDirectiveTests {
         assertEqualsIgnoringWhitespace("""
                 <h2 style="margin-left:4000px;margin-right:4000px">Lorem ipsum</h2>""",
                 actualOutput);
+
+        // Pass many digits for opacity (make sure we don't get unintended localization)
+        actualOutput = render("""
+                <@Heading style={ 'opacity': 0.7654 }>
+                    Lorem ipsum
+                </@Heading>""");
+        assertEqualsIgnoringWhitespace("""
+                <h1 style="opacity:0.7654">Lorem ipsum</h1>""",
+                actualOutput);
     }
 
 }

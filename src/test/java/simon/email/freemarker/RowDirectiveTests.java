@@ -15,4 +15,12 @@ public class RowDirectiveTests {
                 actualOutput);
     }
 
+    @Test
+    void renderRowComponentWithStyle() {
+        String actualOutput = render("<@Row style={ 'opacity': 0.7654} />");
+        assertEqualsIgnoringWhitespace("""
+                <table align="center" width="100%" data-id="freemarker-email-row" style="opacity:0.7654" role="presentation" cellSpacing="0" cellPadding="0" border="0"><tbody style="width:100%"><tr style="width:100%"></tr></tbody></table>""",
+                actualOutput);
+    }
+
 }

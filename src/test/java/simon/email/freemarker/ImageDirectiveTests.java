@@ -24,6 +24,11 @@ public class ImageDirectiveTests {
         TestUtils.assertEqualsIgnoringWhitespace("""
                 <img data-id="freemarker-email-img" alt="Cat" src="cat.jpg" width="30000" height="30000" style="display:block;outline:none;border:none;text-decoration:none"/>""",
                 actualOutput);
+        actualOutput = TestUtils.render(
+                "<@Img src=\"cat.jpg\" alt=\"Cat\" width=300 height=400 style={ 'opacity': 0.7654 } />");
+        TestUtils.assertEqualsIgnoringWhitespace("""
+                <img data-id="freemarker-email-img" alt="Cat" src="cat.jpg" width="300" height="400" style="display:block;outline:none;border:none;text-decoration:none;opacity:0.7654"/>""",
+                actualOutput);
     }
 
 }

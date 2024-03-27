@@ -25,9 +25,9 @@
         </#if>
         <#if style?is_hash>
             <#local style=marginStyle + style>
-            style="${style?keys?map(name -> name + ':' + style[name])?join(';')}"
+            style="<#list style as key, val>${key}:${val?is_number?then(val?c, val)}<#sep>;</#list>"
         <#else>
-            style="${marginStyle?keys?map(name -> name + ':' + marginStyle[name])?join(";") + ';' + style}"
+            style="<#list marginStyle as key, val>${key}:${val}<#sep>;</#list>;${style}"
         </#if>
     >
         <#nested>

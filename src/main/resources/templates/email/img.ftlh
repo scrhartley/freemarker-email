@@ -16,9 +16,9 @@
         <#if height?has_content>height="${height?is_number?then(height?c, height)}"</#if>
         <#if style?is_hash>
             <#local style=baseStyle + style>
-            style="${style?keys?map(name -> name + ':' + style[name])?join(';')}"
+            style="<#list style as key, val>${key}:${val?is_number?then(val?c, val)}<#sep>;</#list>"
         <#else>
-            style="${baseStyle?keys?map(name -> name + ':' + baseStyle[name])?join(";") + ';' + style}"
+            style="<#list baseStyle as key, val>${key}:${val}<#sep>;</#list>;${style}"
         </#if>
     />
 </#macro>
