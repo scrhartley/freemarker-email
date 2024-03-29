@@ -55,9 +55,9 @@
         </#if>
         style="${buttonStyle?keys
             ?filter(key -> !key?matches("padding-(?:top|right|bottom|left)"))
-            ?map(name -> name + ':' +
-                [buttonStyle[name]]?map(val -> val?is_number?then(val?c, val))?first
-            )?join(';')}"
+            ?map(key -> { 'key': key, 'val': buttonStyle[key] })
+            ?map(entry -> entry.key + ':' + entry.val?is_number?then(entry.val?c, entry.val))
+            ?join(';')}"
         target="${target}"
     >
         <span>
