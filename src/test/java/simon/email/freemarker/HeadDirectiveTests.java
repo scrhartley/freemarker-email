@@ -11,7 +11,7 @@ public class HeadDirectiveTests {
     void renderHeadComponent() {
         String actualOutput = render("<@Head />");
         assertEqualsIgnoringWhitespace("""
-                <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head>""",
+                <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="x-apple-disable-message-reformatting" /></head>""",
                 actualOutput);
     }
 
@@ -23,7 +23,7 @@ public class HeadDirectiveTests {
                 </@Head>
                 """);
         assertEqualsIgnoringWhitespace("""
-                <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>My email title</title></head>""",
+                <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="x-apple-disable-message-reformatting" /><title>My email title</title></head>""",
                 actualOutput);
     }
 
