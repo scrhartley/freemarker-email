@@ -4,7 +4,6 @@
         <#if attrs?is_hash>
             <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
-        id="__freemarker-email"
         lang="${lang}"
         dir="${dir}"
     >

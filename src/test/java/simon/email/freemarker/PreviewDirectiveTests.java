@@ -15,18 +15,18 @@ public class PreviewDirectiveTests {
 
         String actualOutput = render("<@Preview>Email preview text</@Preview>");
         assertEqualsIgnoringWhitespace("""
-                <div id="__freemarker-email-preview" style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">Email preview text</div>""",
+                <div style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">Email preview text</div>""",
                 actualOutput);
 
         actualOutput = render("<@Preview>Email ${\"preview\"} text</@Preview>");
         assertEqualsIgnoringWhitespace("""
-                <div id="__freemarker-email-preview" style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">Email preview text</div>""",
+                <div style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">Email preview text</div>""",
                 actualOutput);
 
         String longText = "really long".repeat(100);
         actualOutput = render("<@Preview>" + longText + "</@Preview>");
         assertEqualsIgnoringWhitespace("""
-                <div id="__freemarker-email-preview" style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">really longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally </div>""",
+                <div style="display:none;overflow:hidden;line-height:1px;opacity:0;max-height:0;max-width:0">really longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally longreally </div>""",
                 actualOutput);
     }
 }
