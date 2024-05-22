@@ -8,7 +8,6 @@
         <#if attrs?is_hash>
             <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
-        data-id="freemarker-email-hr"
         <#if style?is_hash>
             <#local style=baseStyle + style>
             style="<#list style as key, val>${key}:${val?is_number?then(val?c, val)}<#sep>;</#list>"

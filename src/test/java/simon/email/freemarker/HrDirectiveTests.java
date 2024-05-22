@@ -11,7 +11,7 @@ public class HrDirectiveTests {
     void renderHrComponent() {
         String actualOutput = render("<@Hr />");
         assertEqualsIgnoringWhitespace("""
-                <hr data-id="freemarker-email-hr" style="width:100%;border:none;border-top:1px solid #eaeaea">""",
+                <hr style="width:100%;border:none;border-top:1px solid #eaeaea">""",
                 actualOutput);
     }
 
@@ -19,7 +19,7 @@ public class HrDirectiveTests {
     void renderHrComponentWithStyleMap() {
         String actualOutput = render("<@Hr style={ 'width': '99%', 'opacity': 0.7654 } />");
         assertEqualsIgnoringWhitespace("""
-                <hr data-id="freemarker-email-hr" style="width:99%;border:none;border-top:1px solid #eaeaea;opacity:0.7654">""",
+                <hr style="width:99%;border:none;border-top:1px solid #eaeaea;opacity:0.7654">""",
                 actualOutput);
     }
 
@@ -27,7 +27,7 @@ public class HrDirectiveTests {
     void renderHrComponentWithStyleAttr() {
         String actualOutput = render("<@Hr style='color:red' />");
         assertEqualsIgnoringWhitespace("""
-                <hr data-id="freemarker-email-hr" style="width:100%;border:none;border-top:1px solid #eaeaea;color:red">""",
+                <hr style="width:100%;border:none;border-top:1px solid #eaeaea;color:red">""",
                 actualOutput);
     }
 

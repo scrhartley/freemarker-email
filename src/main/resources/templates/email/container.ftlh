@@ -9,7 +9,6 @@
         border="0"
         cellPadding="0"
         cellSpacing="0"
-        data-id="__freemarker-email-container"
         role="presentation"
         <#if style?is_hash>
             <#local style=baseStyle + style>

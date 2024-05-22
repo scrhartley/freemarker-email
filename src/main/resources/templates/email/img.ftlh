@@ -9,7 +9,6 @@
         <#if attrs?is_hash>
             <#list attrs as name, value>${name}="${value}"<#sep> </#list>
         </#if>
-        data-id="freemarker-email-img"
         <#if alt?has_content>alt="${alt}"</#if>
         src="${src}"
         <#if width?has_content>width="${width?is_number?then(width?c, width)}"</#if>

@@ -8,7 +8,7 @@ public class LinkComponentTests {
     void renderLinkComponent() {
         String actualOutput = TestUtils.render("<@Link href=\"https://example.com\">Example</@Link>");
         TestUtils.assertEqualsIgnoringWhitespace("""
-                <a href="https://example.com" data-id="freemarker-email-link" target="_blank" style="color:#067df7;text-decoration:none">Example</a>""",
+                <a href="https://example.com" target="_blank" style="color:#067df7;text-decoration:none">Example</a>""",
                 actualOutput);
     }
 
@@ -17,7 +17,7 @@ public class LinkComponentTests {
         String actualOutput = TestUtils.render(
                 "<@Link href=\"https://example.com\" style={ 'opacity': 0.7654 }>Example</@Link>");
         TestUtils.assertEqualsIgnoringWhitespace("""
-                <a href="https://example.com" data-id="freemarker-email-link" target="_blank" style="color:#067df7;text-decoration:none;opacity:0.7654">Example</a>""",
+                <a href="https://example.com" target="_blank" style="color:#067df7;text-decoration:none;opacity:0.7654">Example</a>""",
                 actualOutput);
     }
 

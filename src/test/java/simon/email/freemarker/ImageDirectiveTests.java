@@ -8,7 +8,7 @@ public class ImageDirectiveTests {
     void renderImageComponent() {
         String actualOutput = TestUtils.render("<@Img src=\"cat.jpg\" alt=\"Cat\" width=\"300\" height=\"300\" />");
         TestUtils.assertEqualsIgnoringWhitespace("""
-                <img data-id="freemarker-email-img" alt="Cat" src="cat.jpg" width="300" height="300" style="display:block;outline:none;border:none;text-decoration:none"/>""",
+                <img alt="Cat" src="cat.jpg" width="300" height="300" style="display:block;outline:none;border:none;text-decoration:none"/>""",
                 actualOutput);
     }
 
@@ -16,18 +16,18 @@ public class ImageDirectiveTests {
     void renderImageWithNumbersComponent() {
         String actualOutput = TestUtils.render("<@Img src=\"cat.jpg\" alt=\"Cat\" width=300 height=300 />");
         TestUtils.assertEqualsIgnoringWhitespace("""
-                <img data-id="freemarker-email-img" alt="Cat" src="cat.jpg" width="300" height="300" style="display:block;outline:none;border:none;text-decoration:none"/>""",
+                <img alt="Cat" src="cat.jpg" width="300" height="300" style="display:block;outline:none;border:none;text-decoration:none"/>""",
                 actualOutput);
 
         // Check i18n doesn't accidentally format numbers
         actualOutput = TestUtils.render("<@Img src=\"cat.jpg\" alt=\"Cat\" width=30000 height=30000 />");
         TestUtils.assertEqualsIgnoringWhitespace("""
-                <img data-id="freemarker-email-img" alt="Cat" src="cat.jpg" width="30000" height="30000" style="display:block;outline:none;border:none;text-decoration:none"/>""",
+                <img alt="Cat" src="cat.jpg" width="30000" height="30000" style="display:block;outline:none;border:none;text-decoration:none"/>""",
                 actualOutput);
         actualOutput = TestUtils.render(
                 "<@Img src=\"cat.jpg\" alt=\"Cat\" width=300 height=400 style={ 'opacity': 0.7654 } />");
         TestUtils.assertEqualsIgnoringWhitespace("""
-                <img data-id="freemarker-email-img" alt="Cat" src="cat.jpg" width="300" height="400" style="display:block;outline:none;border:none;text-decoration:none;opacity:0.7654"/>""",
+                <img alt="Cat" src="cat.jpg" width="300" height="400" style="display:block;outline:none;border:none;text-decoration:none;opacity:0.7654"/>""",
                 actualOutput);
     }
 

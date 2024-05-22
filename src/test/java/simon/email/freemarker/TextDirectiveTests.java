@@ -11,7 +11,7 @@ public class TextDirectiveTests {
     void renderTextComponent() {
         String actualOutput = render("<@Text>Lorem ipsum</@Text>");
         assertEqualsIgnoringWhitespace("""
-                <p data-id="freemarker-email-text" style="font-size:14px;line-height:24px;margin:16px 0">Lorem ipsum</p>""",
+                <p style="font-size:14px;line-height:24px;margin:16px 0">Lorem ipsum</p>""",
                 actualOutput);
     }
 
@@ -20,7 +20,7 @@ public class TextDirectiveTests {
         String actualOutput = render(
                 "<@Text style={ 'font-size': '16px', 'opacity': 0.7654 }>Lorem ipsum</@Text>");
         assertEqualsIgnoringWhitespace("""
-                <p data-id="freemarker-email-text" style="font-size:16px;line-height:24px;margin:16px 0;opacity:0.7654">Lorem ipsum</p>""",
+                <p style="font-size:16px;line-height:24px;margin:16px 0;opacity:0.7654">Lorem ipsum</p>""",
                 actualOutput);
     }
 
@@ -28,7 +28,7 @@ public class TextDirectiveTests {
     void renderHrComponentWithStyleAttr() {
         String actualOutput = render("<@Text style='color:red'>Lorem ipsum</@Text>");
         assertEqualsIgnoringWhitespace("""
-                <p data-id="freemarker-email-text" style="font-size:14px;line-height:24px;margin:16px 0;color:red">Lorem ipsum</p>""",
+                <p style="font-size:14px;line-height:24px;margin:16px 0;color:red">Lorem ipsum</p>""",
                 actualOutput);
     }
 
